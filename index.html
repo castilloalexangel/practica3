@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hola Mundo RGB</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0d0d0d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: 'Pacifico', cursive;
+    }
+
+    @keyframes rgb-shift {
+      0%   { color: rgb(255, 50, 50);  text-shadow: 0 4px 30px rgba(255, 50, 50, 0.5); }
+      16%  { color: rgb(255, 180, 0);  text-shadow: 0 4px 30px rgba(255, 180, 0, 0.5); }
+      33%  { color: rgb(50, 230, 80);  text-shadow: 0 4px 30px rgba(50, 230, 80, 0.5); }
+      50%  { color: rgb(0, 200, 255);  text-shadow: 0 4px 30px rgba(0, 200, 255, 0.5); }
+      66%  { color: rgb(130, 60, 255); text-shadow: 0 4px 30px rgba(130, 60, 255, 0.5); }
+      83%  { color: rgb(255, 50, 200); text-shadow: 0 4px 30px rgba(255, 50, 200, 0.5); }
+      100% { color: rgb(255, 50, 50);  text-shadow: 0 4px 30px rgba(255, 50, 50, 0.5); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50%       { transform: translateY(-12px); }
+    }
+
+    h1 {
+      font-size: 80px;
+      letter-spacing: 2px;
+      animation: rgb-shift 4s linear infinite, float 3s ease-in-out infinite;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+      letter-spacing: 5px;
+      font-size: 14px;
+      color: #555;
+      margin-top: 12px;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>¡Hola mundo!</h1>
+    <p>con colores rgb</p>
+  </div>
+</body>
+</html>
